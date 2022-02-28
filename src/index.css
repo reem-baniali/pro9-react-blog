@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+}
+
+.home-container{
+  display: grid;
+  grid-template-areas: 
+  "nav nav nav"
+  "main main main"
+  "blog blog blog"
+  "footer footer footer"
+  ;
+}
+.nav{
+  grid-area:nav;
+}
+.main-container{
+  grid-area:main;
+}
+.blogs-container{
+  grid-area:blog;
+  /* grid-template-columns: repeat(4,1fr);
+  grid-column-start:1  ;
+  grid-column-end:5 ; */
+
+  margin-top: 130px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:60px;
+}
+.footer-container{
+  grid-area:footer;
+
+}
+.blog{
+  width:25%;
+  background-color: #ecece7a1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  position: relative;
+  justify-content: center;
+
+}
+.blog:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+.card-body{
+
+  position: absolute;
+  padding: 10px 20px 10px 20px;
+  color: #444;
+  width: 80%;
+
+
+}
+.card-btn{
+        border: 1px solid rgb(255, 92, 92);
+        transition-duration:2s;
+        background-color: #fdfdfd;
+        padding: 10px 15px 10px 15px ;
+        font-size: 15px;
+        border-radius: 15px;
+        margin-top:50px;
+        color: #444;
+      
+}
+img{
+  width: 100%;
+  height: 60%;
+}
+strong{
+  width: 100%;
+  text-align: center;
+}
+      
+.card-btn:hover {
+        background-color: rgb(255, 92, 92); 
+        color: #fdfdfd;
+        cursor: pointer;
+        font-size: 16px;
+}
+a {
+    text-decoration: none;
+}
+.card-title{
+  margin-top: 1%;
+}
+.card-navigat{
+ margin-top:20px;
+
+}
+/* deisgn for create post  page  */
+.create-post-container{
+  display: grid;
+  grid-template-areas: 
+  "nav nav nav"
+  "formTitle formTitle formTitle"
+  "form form form"
+  "footer footer footer";
+  width:100vw;
+  height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+.form-container{
+  grid-area:form;
+  margin: 0 auto 15vh auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+
+}
+.form-title{
+  grid-area: formTitle;
+  margin: 15vh 0 5vh 0;
+  width: 100vw;
+  font-size: 18px;
+
+}
+input{
+
+  width: 100%;
+  border-radius: 15px;
+  height: 40px;
+  margin-top: 15PX;
+
+}
+textarea{
+  width: 100%;
+  border-radius: 15px;
+  height: 150px;
+  margin-top: 15px;
+width: 100%;
+}
+.form-btn{
+  width: 50%;
+  border-radius: 15px;
+  padding: 8px 15px 8px 15px;
+  margin-top: 15px;
+}
+
+.desc-box{
+margin-top: 15px;
+width: 100%;
+}
+.footer-container{
+margin-top: 50vh;
+}

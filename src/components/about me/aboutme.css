@@ -1,0 +1,13 @@
+.aboutme-container{
+        grid-column-start:3 ;
+        grid-column-end:5;
+    
+        margin-top: 130px;
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width:20vh;
+    
+}

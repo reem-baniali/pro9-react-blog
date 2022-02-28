@@ -1,0 +1,29 @@
+
+.footer-container{
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    display: flex;
+    justify-content: space-around;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+  
+    background-color: whitesmoke;
+    align-items: center;
+    height: 150px;
+}
+
+.left, .right {
+    flex:3
+}
+.center {
+    flex:6;
+}
+
+.logoFooter{
+width:150px;
+height: 100px;
+}
