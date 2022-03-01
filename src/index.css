@@ -6,7 +6,7 @@ body {
   display: grid;
   grid-template-areas: 
   "nav nav nav"
-  "main main main"
+  " main "
   "blog blog blog"
   "footer footer footer"
   ;
@@ -17,84 +17,54 @@ body {
 .main-container{
   grid-area:main;
 }
+
 .blogs-container{
   grid-area:blog;
-  /* grid-template-columns: repeat(4,1fr);
-  grid-column-start:1  ;
-  grid-column-end:5 ; */
-
-  margin-top: 130px;
-  margin-bottom: 60px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap:60px;
+  gap:70px;
 }
 .footer-container{
   grid-area:footer;
 
 }
-.blog{
-  width:25%;
-  background-color: #ecece7a1;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  position: relative;
-  justify-content: center;
+.card{
+  /* width:22vw !important; */
+  border-radius: 15px !important;
+  box-shadow: 3 4px 8px 3 rgba(0,0,0,0.2);
+  transition: 3s;
 
 }
-.blog:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.card:hover{
+  box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
 
 }
 
-.card-body{
 
-  position: absolute;
-  padding: 10px 20px 10px 20px;
-  color: #444;
-  width: 80%;
-
-
-}
 .card-btn{
         border: 1px solid rgb(255, 92, 92);
         transition-duration:2s;
         background-color: #fdfdfd;
-        padding: 10px 15px 10px 15px ;
-        font-size: 15px;
+        padding: 5px 25px 5px 25px ;
+        font-size: 18px;
         border-radius: 15px;
-        margin-top:50px;
+    
         color: #444;
       
 }
-img{
-  width: 100%;
-  height: 60%;
-}
-strong{
-  width: 100%;
-  text-align: center;
-}
-      
+    
 .card-btn:hover {
         background-color: rgb(255, 92, 92); 
-        color: #fdfdfd;
+        color: #fdfdfd !important;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 19px;
 }
-a {
-    text-decoration: none;
-}
-.card-title{
-  margin-top: 1%;
-}
-.card-navigat{
- margin-top:20px;
 
-}
+
+
 /* deisgn for create post  page  */
 .create-post-container{
   display: grid;
@@ -110,12 +80,14 @@ a {
 }
 .form-container{
   grid-area:form;
-  margin: 0 auto 15vh auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100vw;
+ width: 60%;
 
+margin-left: 20%;
+margin-top: 5%;
+}
+.form{
+  /* margin: auto; */
+  /* margin-top: ; */
 }
 .form-title{
   grid-area: formTitle;
@@ -142,8 +114,17 @@ width: 100%;
 .form-btn{
   width: 50%;
   border-radius: 15px;
-  padding: 8px 15px 8px 15px;
-  margin-top: 15px;
+
+  margin: 15px !important;
+  color:#444;
+  background-color: #fff !important;
+  border: solid 1px rgb(255, 92, 92) !important;
+  
+}
+.form-btn:hover{
+  background-color: rgb(255, 92, 92) !important;
+  color : #fff !important;
+
 }
 
 .desc-box{
@@ -152,4 +133,8 @@ width: 100%;
 }
 .footer-container{
 margin-top: 50vh;
+}
+
+.details-container .card{
+  width: 70vw !important;
 }

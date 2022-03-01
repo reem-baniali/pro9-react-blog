@@ -17,7 +17,7 @@ function App() {
           {/* <Nav /> */}
 
           <Routes>
-            <Route path="/" element={<Home />} forceRefresh={true} />
+            {/* <Route path="/" element={<Home />} forceRefresh={true} /> */}
             {/* <Route path="/About" element={<About />} /> */}
             <Route path="/Details" element={<Details />} />
             <Route
@@ -25,7 +25,7 @@ function App() {
               element={<Create posts={posts} setPosts={setPosts} />}
             />
             <Route
-              path="/Blog"
+              path="/"
               element={<Blog posts={posts} setPosts={setPosts} />}
             />
           </Routes>

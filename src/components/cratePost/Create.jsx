@@ -29,8 +29,8 @@ const handleChangeTitle = (e)=>{
         console.log(post.title);
    var userPost = {
     id: Math.random()*1000,
-    title:"",
-    description:'',
+    title:post.title,
+    description:post.description,
     img:faker.image.avatar(),
     name:faker.name.firstName(),
     date: moment().calendar(),
@@ -59,9 +59,48 @@ if (JSON.parse(localStorage.getItem("posts")) === null) {
     return (
       <div className='create-post-container'>
           <Nav />
-          <div className='form-title'><h2>Create your Blog</h2></div>
 
           <div className='form-container'>
+          <form class="ui form " onSubmit={handleSubmit}>
+  <div class="field">
+    <label>Title</label>
+    <input type="text" name="title"    
+     value={post.title} 
+     id="title" 
+     placeholder="First Name"
+     onChange={handleChangeTitle} />
+  </div>
+ 
+  <div class="ui form">
+         <div class="field">
+         <label>Description</label>
+        <textarea
+         value={post.description} 
+         id="desc" 
+         name="desc" 
+         onChange={handleChangeDesc} 
+        ></textarea>
+        </div>
+        {/* <div class="field">
+        <label>Short Text</label>
+       <textarea rows="2"></textarea>
+       </div> */}
+         </div>
+
+ 
+  <button class="ui button form-btn" type="submit">Submit</button>
+</form>
+          </div>
+          
+
+
+
+
+          {/* <div className='form-title'><h2>Create your Blog</h2></div>
+
+          <div className='form-container'>
+
+            
           <form onSubmit={handleSubmit}>
               <div>
                   <label >Title</label>
@@ -81,7 +120,7 @@ if (JSON.parse(localStorage.getItem("posts")) === null) {
               </div>
               <button className='form-btn' type="submit" value="Submit" >submit</button>
           </form>
-          </div>
+          </div> */}
           <Footer />
       </div>
     )

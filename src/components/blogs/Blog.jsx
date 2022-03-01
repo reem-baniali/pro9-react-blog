@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Nav from '../navbar/nav';
 import Main from '../mainImage/Main';
 import Footer from '../footer/Footer';
+import faker from "@faker-js/faker";
 
 const Blog = ({posts,setPosts})=>{
  
@@ -31,10 +32,32 @@ useEffect(()=>{
     <>
       <Nav/>
    <Main/>
- 
+  
       <div className='blogs-container'>
-
       {posts.map((post)=>(
+      <div class="ui card">
+  <div class="image">
+    <img src={post.img}  />
+  </div>
+  <div class="content">
+    <a class="header">{post.title}</a>
+    <div class="meta">
+      <span class="date">{post.date}</span>
+    </div>
+    <div class="description">
+      <strong>Writer : <b> {post.name}</b></strong>
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <Link onClick={()=>goDetails(post.id)}  to="/Details"  className='card-btn'>Read Blog</Link>
+
+    </a>
+  </div>
+</div>
+     ))}
+      {/* {posts.map((post)=>(
+
   <div class="blog">
   <img src={post.img} alt="rblog-imageeem" />
   <div className='card-body'>
@@ -45,7 +68,7 @@ useEffect(()=>{
   </div>
   </div>
 </div>
-      ))}
+      ))} */}
       </div>
       <Footer/>
       </>
